@@ -1,0 +1,38 @@
+//creating and printing a simple linked list with 3 nodes
+#include<stdio.h>
+#include<stdlib.h>
+
+
+struct node{
+	int data;
+	struct node* link;
+};
+
+void printall(struct node* check)
+{
+		while(check!=NULL)
+		{
+			printf("%d \n",check->data);
+			check = check->link;
+		}
+}
+
+
+int main()
+{
+	struct node* first = (struct node*)malloc(sizeof(struct node*));
+	struct node* second = (struct node*)malloc(sizeof(struct node*));
+	struct node* third = (struct node*)malloc(sizeof(struct node*));
+	
+	first->data= 1;
+	first->link= second;
+	second->data=2;
+	second->link=third;
+	third->data=3;
+	third->link=NULL;
+	
+	printall(first);
+	 
+	 
+	return 0;
+}
