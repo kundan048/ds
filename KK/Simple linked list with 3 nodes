@@ -1,4 +1,6 @@
 //creating and printing a simple linked list with 3 nodes
+//We cannot do binary search with linked  list because it has no random access. we have to travserse the list to access any particular element
+
 #include<stdio.h>
 #include<stdlib.h>
 
